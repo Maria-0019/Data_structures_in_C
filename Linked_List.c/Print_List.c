@@ -2,20 +2,21 @@
 #include<stdlib.h>
 
 struct Node {
-   int a[]=
+   int data;
    struct Node*next;
 };
 
-int print_list (struct* Node) {
+int print_list (struct Node *head) {
     int arr[3];
-    i=0;
+   int i=0;
   while(head!=NULL) {
      arr[i]=head->data;
      i++;
-     head=head->data;  }
+     head=head->next;  }
    for (int j=0; j<i; j++) {
-    return arr[j];
+    printf(" %d ", arr[j]);
    }
+   return 0;
 }
 int main()
 {
@@ -36,7 +37,6 @@ int main()
     third->data = 30;
     third->next = NULL;
 
-printf("Print list=%d\n", print_list(head));
-
+ print_list(head);
 return 0;
 }
