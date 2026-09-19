@@ -33,6 +33,15 @@ int pop() {
     top=top->next;
     return val;
 }
+//PEEK
+int peek(){
+      if(top==NULL) {
+          printf("stack is empty");
+          
+      }
+      return top->data;
+  }
+
 //DISPLAY
 void display()
 {
@@ -52,6 +61,7 @@ int main(){
     display();
     printf("\npopped element= %d\n", pop());
    display();
+    printf("\n last inserted element= %d", peek());
     return 0;
 }
 
